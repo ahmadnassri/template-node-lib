@@ -3,10 +3,10 @@
   "name": "${PACKAGE_NAME}",
   "description": "${PROJECT_DESCRIPTION}",
   "author": "Ahmad Nassri <email@ahmadnassri.com> (https://www.ahmadnassri.com)",
-  "homepage": "https://github.com/ahmadnassri/${REPO_NAME}",
+  "homepage": "https://github.com/${REPO_NAME}",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahmadnassri/${REPO_NAME}.git"
+    "url": "https://github.com/${REPO_NAME}.git"
   },
   "license": "MIT",
   "main": "lib/index.js",
@@ -21,7 +21,7 @@
     "lib"
   ],
   "bugs": {
-    "url": "https://github.com/ahmadnassri/${REPO_NAME}/issues"
+    "url": "https://github.com/${REPO_NAME}/issues"
   },
   "scripts": {
     "test": "tap test --no-coverage",

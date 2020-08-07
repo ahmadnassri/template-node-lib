@@ -1,8 +1,8 @@
-name: release
+name: test
 
 on:
   push:
-    branches:
+    branches-ignore:
       - master
 
 jobs:
