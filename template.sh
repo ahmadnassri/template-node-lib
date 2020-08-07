@@ -17,7 +17,7 @@ export PACKAGE_NAME=$PACKAGE_NAME
 export DOLLAR='$' # used in README.template
 
 # replace template content
-find . ! -path './.git/*' ! -name 'template.sh' -type f -exec bash -c '
+find . ! -path './.git/*' ! -path './template.sh' ! -path './README.md' -type f -exec bash -c '
   TARGET=${PREFIX:-.}/${1#./}
   mkdir -p ${TARGET%/*}
   envsubst < $1 > $TARGET.temp
