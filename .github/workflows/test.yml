@@ -15,7 +15,7 @@ jobs:
       - run: npm audit --audit-level=moderate
 
   test:
-    needs: dependencies
+    needs: audit
 
     strategy:
       matrix:

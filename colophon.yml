@@ -1,0 +1,8 @@
+version: 2.0
+
+id: ${PACKAGE_NAME}
+
+about:
+  title: ${PROJECT_TITLE}
+  description: ${PROJECT_DESCRIPTION}
+  repository: ${REPO_NAME}
