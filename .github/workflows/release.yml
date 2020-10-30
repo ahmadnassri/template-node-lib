@@ -1,51 +1,47 @@
 name: release
 
 on:
-  push:
-    branches:
-      - master
+  workflow_run:
+    workflows: [ test ]
+    branches: [ master ]
+    types: [ completed ]
 
 jobs:
-  audit:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.1.1
-      - run: npm audit --audit-level=moderate
-
-  test:
-    needs: dependencies
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        node-version: [10, 12, 13, 14]
-
-    runs-on: ${{ matrix.os }}
-
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json') }}
-
-      - uses: actions/setup-node@v2.1.1
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - run: npm ci
-      - run: npm run test
-
   release:
-    needs: test
+    timeout-minutes: 5
 
     runs-on: ubuntu-latest
 
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    outputs:
+      published: ${{ steps.release.outputs.published }}
+      version: ${{ steps.release.outputs.release-version }}
+
+    env:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
     steps:
       - uses: actions/checkout@v2
-      - uses: ahmadnassri/action-semantic-release@v1
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
+      - id: release
+        uses: ahmadnassri/action-semantic-release@v1
+
+  mirror:
+    needs: release
+
+    timeout-minutes: 5
+
+    runs-on: ubuntu-latest
+
+    if: needs.release.outputs.published == 'true'
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: publish to github registry
+        run: |
+          npm config --userconfig .npmrc set registry=https://npm.pkg.github.com/${{ github.repository_owner }}
+          npm config --userconfig .npmrc set //npm.pkg.github.com/:_authToken ${{ secrets.GH_TOKEN }}
+          npm config --userconfig .npmrc set always-auth true
+          npm version --no-git-tag-version v${{ needs.release.outputs.version }}
+          npm publish
