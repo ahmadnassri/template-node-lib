@@ -15,10 +15,12 @@ node library project template
 > Using [GitHub Actions](https://github.com/features/actions)
 
   - automatic releases with [conventional-commits](https://www.conventionalcommits.org/) & [semantic-release](https://github.com/marketplace/actions/conventional-semantic-release)
-  - full history changelog in GitHub Releases
+  - publish to both npm Public Registry & GitHub Package Manager
+  - full history changelog in [GitHub Releases](https://github.com/ahmadnassri/template-node/releases)
   - automatic pull-requests for dependency updates using [dependabot](https://dependabot.com/)
   - automatic merging of "patch" updates to dependencies using [dependabot-auto-merge](https://github.com/marketplace/actions/dependabot-auto-merge)
   - lint everything with [super-linter](https://github.com/github/super-linter)
+  - lint commit message format against [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
   - test on all LTS versions of Node.js
   - run `npm audit` before releasing / testing to keep a higher security standard
 
@@ -32,30 +34,19 @@ node library project template
 
 ## Usage
 
-#### A. GitHub Templates
+#### GitHub Templates
 
 1.  create a repository from the template
 2.  clone locally
-3.  run `./template.sh`
-4.  add secrets in GitHub Actions for `NPM_TOKEN` & `GH_TOKEN`
-5.  update `docs/README.md` with info about the project
+3.  add secrets in GitHub Actions for `NPM_TOKEN` & `GH_TOKEN`
+4.  update `colophon.yml`, `docs/README.md` with info about the project
 
-> **Note:**
-> 
->   - `GH_TOKEN` is required for action `auto-merge` action
->   - `GH_TOKEN` is **NOT** required for other actions, but used as a preferred value anyway
-
-#### B. Ongoing Updates
-
-> to update an existing repo with this template's structure
-
-1.  clone template repo
-2.  clone project repo
-3.  run `./template --target path/to/project`
+> **Note:**  
+> `GH_TOKEN` is required for action `auto-merge`, `readme`, `release` workflows
 
 ## Local Automation
 
-use [Docker Compose](https://docs.docker.com/compose/) to run tasks locally:
+use \[Docker Compose\]\[docker-compose\] to run tasks locally:
 
   - `docker-compose run readme` to regenerate `README.md`
   - `docker-compose run test` to run tests across all LTS versions of Node.js
