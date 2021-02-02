@@ -14,23 +14,23 @@ node library project template
 
 > Using [GitHub Actions](https://github.com/features/actions)
 
-  - automatic releases with [conventional-commits](https://www.conventionalcommits.org/) & [semantic-release](https://github.com/marketplace/actions/conventional-semantic-release)
-  - publish to both npm Public Registry & GitHub Package Manager
-  - full history changelog in [GitHub Releases](https://github.com/ahmadnassri/template-node/releases)
-  - automatic pull-requests for dependency updates using [dependabot](https://dependabot.com/)
-  - automatic merging of "patch" updates to dependencies using [dependabot-auto-merge](https://github.com/marketplace/actions/dependabot-auto-merge)
-  - lint everything with [super-linter](https://github.com/github/super-linter)
-  - lint commit message format against [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
-  - test on all LTS versions of Node.js
-  - run `npm audit` before releasing / testing to keep a higher security standard
+-   automatic releases with [conventional-commits](https://www.conventionalcommits.org/) & [semantic-release](https://github.com/marketplace/actions/conventional-semantic-release)
+-   publish to both npm Public Registry & GitHub Package Manager
+-   full history changelog in [GitHub Releases](https://github.com/ahmadnassri/template-node/releases)
+-   automatic pull-requests for dependency updates using [dependabot](https://dependabot.com/)
+-   automatic merging of "patch" updates to dependencies using [dependabot-auto-merge](https://github.com/marketplace/actions/dependabot-auto-merge)
+-   lint everything with [super-linter](https://github.com/github/super-linter)
+-   lint commit message format against [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+-   test on all LTS versions of Node.js
+-   run `npm audit` before releasing / testing to keep a higher security standard
 
 ##### Local Automation
 
 > Using [Docker Compose](https://docs.docker.com/compose/)
 
-  - lint everything with [super-linter](https://github.com/github/super-linter)
-  - test on all LTS versions of Node.js
-  - generate README using [pandoc](https://pandoc.org/) with a [template](./docs/README.template)
+-   lint everything with [super-linter](https://github.com/github/super-linter)
+-   test on all LTS versions of Node.js
+-   generate README using [pandoc](https://pandoc.org/) with a [template](./docs/README.template)
 
 ## Usage
 
@@ -48,13 +48,13 @@ node library project template
 
 use \[Docker Compose\]\[docker-compose\] to run tasks locally:
 
-  - `docker-compose run readme` to regenerate `README.md`
-  - `docker-compose run test` to run tests across all LTS versions of Node.js
-  - `docker-compose run lint` to execute [super-linter](https://github.com/github/super-linter) locally
+-   `docker-compose run readme` to regenerate `README.md`
+-   `docker-compose run test` to run tests across all LTS versions of Node.js
+-   `docker-compose run lint` to execute [super-linter](https://github.com/github/super-linter) locally
 
 > **Note:**  
 > Your main `README.md` file is in `docs/README.md`, the file at root is generated using [pandoc](https://pandoc.org/) using the provided [template](./docs/README.template).
-> 
+>
 > You should run `docker-compose run readme` after any change to `docs/README.md` and before commit / push
 
 ----
