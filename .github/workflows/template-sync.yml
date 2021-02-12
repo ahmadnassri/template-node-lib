@@ -1,16 +1,19 @@
 name: template-sync
 
 on:
-  push:
-    branches: master
+  workflow_run:
+    workflows: [ release ]
+    branches: [ master ]
+    types: [ completed ]
 
 jobs:
   template-sync:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2 # important!
+      - uses: actions/checkout@v2
+      - uses: ahmadnassri/action-workflow-run-wait@v1
       - uses: ahmadnassri/action-template-repository-sync@v1
         with:
           github-token: ${{ secrets.GH_TOKEN }}
-          dry-run: false
+          dry-run: true
