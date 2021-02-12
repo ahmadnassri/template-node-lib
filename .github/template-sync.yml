@@ -1,6 +1,6 @@
 additional:
   # temporarily include repos manually # https://github.com/github/docs/issues/3630
-  - "oas-schemas"
+  - "node-oas-schemas"
 
 files:
   - "!**.js"
