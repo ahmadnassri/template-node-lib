@@ -16,7 +16,7 @@ node library project template
 
 -   automatic releases with [conventional-commits](https://www.conventionalcommits.org/) & [semantic-release](https://github.com/marketplace/actions/conventional-semantic-release)
 -   publish to both npm Public Registry & GitHub Package Manager
--   full history changelog in [GitHub Releases](https://github.com/ahmadnassri/template-node-lib/releases)
+-   full history changelog in [GitHub Releases](https://github.com/ahmadnassri/template-node/releases)
 -   automatic pull-requests for dependency updates using [dependabot](https://dependabot.com/)
 -   automatic merging of "patch" updates to dependencies using [dependabot-auto-merge](https://github.com/marketplace/actions/dependabot-auto-merge)
 -   lint everything with [super-linter](https://github.com/github/super-linter)
