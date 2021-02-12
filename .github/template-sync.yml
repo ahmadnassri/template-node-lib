@@ -1,6 +1,10 @@
 additional:
   # temporarily include repos manually # https://github.com/github/docs/issues/3630
   - "node-oas-schemas"
+  - "node-oas-request"
+  - "node-api-problem"
+  - "node-smart-promise"
+  - "node-pretty-exceptions"
 
 files:
   - "!**.js"
