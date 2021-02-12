@@ -1,0 +1,11 @@
+additional:
+  # temporarily include repos manually # https://github.com/github/docs/issues/3630
+  - "oas-schemas"
+
+files:
+  - "!**.js"
+  - "!README.md"
+  - "!docs/README.md"
+  - "!colophon.yml"
+  - "!package*.json"
+  - "!**/template-sync.yml"

@@ -1,4 +1,8 @@
-on: push
+name: template-sync
+
+on:
+  push:
+    branches: master
 
 jobs:
   template-sync:
