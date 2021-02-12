@@ -1,0 +1,12 @@
+on: push
+
+jobs:
+  template-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2 # important!
+      - uses: ahmadnassri/action-template-repository-sync@v1
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          dry-run: true
