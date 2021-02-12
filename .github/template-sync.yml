@@ -5,6 +5,10 @@ additional:
   - "node-api-problem"
   - "node-smart-promise"
   - "node-pretty-exceptions"
+  - "node-oas-fastify"
+  - "node-terraform-unidiff"
+  - "node-glob-promise"
+  - "node-ahmad"
 
 files:
   - "!**.js"
