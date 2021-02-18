@@ -1,6 +1,8 @@
 name: template-sync
 
 on:
+  pull_request:
+
   workflow_run:
     workflows: [ release ]
     branches: [ master ]
@@ -8,6 +10,8 @@ on:
 
 jobs:
   template-sync:
+    timeout-minutes: 20
+
     runs-on: ubuntu-latest
 
     steps:
@@ -17,4 +21,3 @@ jobs:
       - uses: ahmadnassri/action-template-repository-sync@v1
         with:
           github-token: ${{ secrets.GH_TOKEN }}
-          dry-run: true
