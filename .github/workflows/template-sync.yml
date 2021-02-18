@@ -1,6 +1,8 @@
 name: template-sync
 
 on:
+  pull_request:
+
   workflow_run:
     workflows: [ release ]
     branches: [ master ]
