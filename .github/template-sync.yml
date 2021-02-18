@@ -1,14 +1,19 @@
 additional:
   # temporarily include repos manually # https://github.com/github/docs/issues/3630
-  - "node-oas-schemas"
-  - "node-oas-request"
-  - "node-api-problem"
-  - "node-smart-promise"
-  - "node-pretty-exceptions"
-  - "node-oas-fastify"
-  - "node-terraform-unidiff"
-  - "node-glob-promise"
-  - "node-ahmad"
+  - "node-*"
+  - "!node-create"
+  - "!node-debug"
+  - "!node-error"
+  - "!node-fs-writefile-promise"
+  - "!node-har"
+  - "!node-har-validator"
+  - "!node-install-group"
+  - "!node-marked-promise"
+  - "!node-simple-http-client"
+  - "!node-spawn-promise"
+  - "!node-stringify-clone"
+  - "!node-uncaught-extender"
+  - "!node-updated"
 
 files:
   - "!**.js"
