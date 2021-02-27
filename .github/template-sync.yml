@@ -12,7 +12,6 @@ additional:
   - "!node-simple-http-client"
   - "!node-spawn-promise"
   - "!node-stringify-clone"
-  - "!node-uncaught-extender"
   - "!node-updated"
 
 files:
