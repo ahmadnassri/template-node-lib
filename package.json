@@ -1,6 +1,6 @@
 {
   "version": "0.0.0-semantically-released",
-  "name": "@ahmadnassri/template-node-lib",
+  "name": "@ahmadnassri/template-lib",
   "description": "node library project template",
   "author": "Ahmad Nassri <email@ahmadnassri.com> (https://www.ahmadnassri.com)",
   "homepage": "https://github.com/ahmadnassri/template-node-lib",
