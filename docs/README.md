@@ -26,6 +26,8 @@
 
 #### GitHub Templates
 
+> Automated through [`@ahmadnassri/action-template-repository-sync`](https://github.com/ahmadnassri/action-template-repository-sync)
+
 1. create a repository from the template
 1. clone locally
 1. add secrets in GitHub Actions for `NPM_TOKEN` & `GH_TOKEN`

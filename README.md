@@ -36,6 +36,8 @@ node library project template
 
 #### GitHub Templates
 
+> Automated through [`@ahmadnassri/action-template-repository-sync`][]
+
 1.  create a repository from the template
 2.  clone locally
 3.  add secrets in GitHub Actions for `NPM_TOKEN` & `GH_TOKEN`
@@ -68,6 +70,7 @@ use \[Docker Compose\]\[docker-compose\] to run tasks locally:
   [Docker Compose]: https://docs.docker.com/compose/
   [pandoc]: https://pandoc.org/
   [template]: ./docs/README.template
+  [`@ahmadnassri/action-template-repository-sync`]: https://github.com/ahmadnassri/action-template-repository-sync
 
 ----
 > Author: [Ahmad Nassri](https://www.ahmadnassri.com/) &bull;
