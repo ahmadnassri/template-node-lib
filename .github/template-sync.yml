@@ -11,7 +11,6 @@ additional:
   - "!node-marked-promise"
   - "!node-simple-http-client"
   - "!node-spawn-promise"
-  - "!node-stringify-clone"
   - "!node-updated"
 
 files:
