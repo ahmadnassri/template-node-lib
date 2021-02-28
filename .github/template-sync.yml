@@ -9,7 +9,6 @@ additional:
   - "!node-har-validator"
   - "!node-install-group"
   - "!node-marked-promise"
-  - "!node-simple-http-client"
   - "!node-spawn-promise"
   - "!node-updated"
 

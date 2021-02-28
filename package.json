@@ -8,8 +8,10 @@
     "type": "git",
     "url": "https://github.com/ahmadnassri/template-node-lib.git"
   },
+  "bugs": {
+    "url": "https://github.com/ahmadnassri/template-node-lib/issues"
+  },
   "license": "MIT",
-  "main": "lib/index.js",
   "keywords": [
   ],
   "engines": {
@@ -18,9 +20,7 @@
   "files": [
     "lib"
   ],
-  "bugs": {
-    "url": "https://github.com/ahmadnassri/template-node-lib/issues"
-  },
+  "main": "lib/index.js",
   "scripts": {
     "test": "tap test --no-coverage",
     "test:watch": "tap test --watch",
