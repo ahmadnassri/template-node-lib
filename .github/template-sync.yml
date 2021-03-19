@@ -11,6 +11,7 @@ additional:
   - "!node-marked-promise"
   - "!node-spawn-promise"
   - "!node-updated"
+  - "test"
 
 files:
   - "!**.js"
