@@ -4,6 +4,10 @@
   "description": "node library project template",
   "author": "Ahmad Nassri <email@ahmadnassri.com> (https://www.ahmadnassri.com)",
   "homepage": "https://github.com/ahmadnassri/template-node-lib",
+  "funding": {
+    "type" : "individual",
+    "url" : "https://github.com/sponsors/ahmadnassri"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ahmadnassri/template-node-lib.git"
