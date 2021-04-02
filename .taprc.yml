@@ -2,7 +2,6 @@
 # Note: this file originates in ahmadnassri/template-node-lib #
 # ----------------------------------------------------------- #
 
-esm: false
 ts: false
 jsx: false
 flow: false
