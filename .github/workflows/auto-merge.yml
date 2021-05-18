@@ -4,7 +4,7 @@
 
 on: pull_request_target
 
-name: pull_request_target
+name: auto-merge
 
 jobs:
   auto-merge:
@@ -20,16 +20,3 @@ jobs:
       - uses: ahmadnassri/action-dependabot-auto-merge@v2.4
         with:
           github-token: ${{ secrets.GH_TOKEN }}
-
-  template-sync:
-    timeout-minutes: 20
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - uses: ahmadnassri/action-template-repository-sync@v1
-        with:
-          github-token: ${{ secrets.GH_TOKEN }}
-          dry-run: true
