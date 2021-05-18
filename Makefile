@@ -13,13 +13,16 @@ NPMRC := $(shell npm config get userconfig)
 pull: ## pull latest containers
 	@docker-compose pull
 
+readme: ## pull latest containers
+	@docker-compose run --rm readme
+
 lint: ## run super-linter
-	@docker-compose run --rm super-linter
+	@docker-compose run --rm lint
 
 install: ## install all dependencies
 	@docker-compose run --rm -e NPM_TOKEN=$(NPM_TOKEN) -e GITHUB_TOKEN=$(GITHUB_TOKEN) -v $(NPMRC):/root/.npmrc test npm install --no-fund --no-audit
 
-test: ## run all npm tests
+test: install ## run all npm tests
 	@docker-compose run --rm test npm run test:ci
 
 clean: ## remove running containers, volumes, node_modules & anything else
