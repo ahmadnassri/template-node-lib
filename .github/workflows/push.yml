@@ -146,20 +146,3 @@ jobs:
           jq '.name = "@'${GITHUB_REPOSITORY/node-/}'"' package.json > /tmp/package.json; mv /tmp/package.json .
           npm version --no-git-tag-version v${{ needs.release.outputs.version }}
           npm publish
-
-  template-sync:
-    needs: release
-
-    timeout-minutes: 20
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: ahmadnassri/action-workflow-queue@v1
-
-      - uses: actions/checkout@v2
-
-      - uses: ahmadnassri/action-template-repository-sync@v1
-        with:
-          github-token: ${{ secrets.GH_TOKEN }}
-          dry-run: true
