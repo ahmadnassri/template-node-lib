@@ -1,0 +1,25 @@
+# ------------------------------------------------------------- #
+# Note: this file is automatically managed in template-template #
+# ------------------------------------------------------------- #
+
+on:
+  - push
+  - pull_request_target
+
+name: template-sync
+
+jobs:
+  template-sync:
+    timeout-minutes: 20
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: ahmadnassri/action-workflow-queue@v1
+
+      - uses: actions/checkout@v2
+
+      - uses: ahmadnassri/action-template-repository-sync@v1
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          dry-run: true
