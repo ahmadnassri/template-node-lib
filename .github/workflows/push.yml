@@ -157,7 +157,7 @@ jobs:
 
       - name: publish to github registry
         run: |
-          jq '.name = "@'${GITHUB_REPOSITORY/node-/}'"' package.json > /tmp/package.json; mv /tmp/package.json .
+          jq '.name = "@'"${GITHUB_REPOSITORY/node-/}"'"' package.json > /tmp/package.json; mv /tmp/package.json .
           npm version --no-git-tag-version v${{ needs.release.outputs.version }}
           npm publish
 
