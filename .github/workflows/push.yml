@@ -46,7 +46,9 @@ jobs:
       - uses: github/super-linter/slim@v4
         env:
           LOG_LEVEL: ERROR
-          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_JSCPD: 'false'
+          VALIDATE_ALL_CODEBASE: 'false'
+          IGNORE_GITIGNORED_FILES: 'true'
           FILTER_REGEX_EXCLUDE: '/github/workspace/README.md|test/fixtures/*'
           GITHUB_TOKEN: ${{ github.token }}
 
