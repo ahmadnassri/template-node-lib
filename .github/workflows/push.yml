@@ -161,7 +161,6 @@ jobs:
           npm version --no-git-tag-version v${{ needs.release.outputs.version }}
           npm publish
 
-
   template-sync:
     timeout-minutes: 20
 
