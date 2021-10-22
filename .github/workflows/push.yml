@@ -1,6 +1,6 @@
-# ------------------------------------------------------------- #
-# Note: this file is automatically managed in template-node-lib #
-# ------------------------------------------------------------- #
+# ----------------------------------------------- #
+# Note: this file originates in template-node-lib #
+# ----------------------------------------------- #
 
 on:
   - push
@@ -114,8 +114,8 @@ jobs:
   release:
     needs: test-run
 
-    # only runs on main branch
-    if: ${{ github.ref == 'refs/heads/master' }}
+    # only runs on main branch for non template repos
+    if: ${{ github.ref == 'refs/heads/master' && !fromJSON(needs.metadata.outputs.repository).is_template }}
 
     timeout-minutes: 20
 
