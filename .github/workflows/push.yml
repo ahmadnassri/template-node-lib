@@ -131,6 +131,8 @@ jobs:
     outputs:
       published: ${{ steps.release.outputs.published }}
       version: ${{ steps.release.outputs.release-version }}
+      version-major: ${{ steps.release.outputs.release-version-major }}
+      version-minor: ${{ steps.release.outputs.release-version-minor }}
 
     steps:
       - uses: actions/checkout@v2.3.5
@@ -211,7 +213,6 @@ jobs:
       - id: meta
         run: |
           echo "::set-output name=name::${{ github.repository_owner }}/$(basename "${GITHUB_REPOSITORY/node-//}")"
-          echo "::set-output name=version::${{ needs.release.outputs.version }}"
 
       # publish
       - uses: docker/build-push-action@v2
@@ -221,17 +222,17 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache
           tags: |
             ${{ steps.meta.outputs.name }}:latest
-            ${{ steps.meta.outputs.name }}:v${{ needs.release.outputs.release-version-major }}.${{ needs.release.outputs.release-version-minor }}
-            ${{ steps.meta.outputs.name }}:v${{ needs.release.outputs.release-version-major }}
-            ${{ steps.meta.outputs.name }}:v${{ needs.release.outputs.release-version }}
+            ${{ steps.meta.outputs.name }}:v${{ needs.release.outputs.version-major }}.${{ needs.release.outputs.version-minor }}
+            ${{ steps.meta.outputs.name }}:v${{ needs.release.outputs.version-major }}
+            ${{ steps.meta.outputs.name }}:v${{ needs.release.outputs.version }}
             ghcr.io/${{ steps.meta.outputs.name }}:latest
-            ghcr.io/${{ steps.meta.outputs.name }}:v${{ needs.release.outputs.release-version-major }}.${{ needs.release.outputs.release-version-minor }}
-            ghcr.io/${{ steps.meta.outputs.name }}:v${{ needs.release.outputs.release-version-major }}
-            ghcr.io/${{ steps.meta.outputs.name }}:v${{ needs.release.outputs.release-version }}
+            ghcr.io/${{ steps.meta.outputs.name }}:v${{ needs.release.outputs.version-major }}.${{ needs.release.outputs.version-minor }}
+            ghcr.io/${{ steps.meta.outputs.name }}:v${{ needs.release.outputs.version-major }}
+            ghcr.io/${{ steps.meta.outputs.name }}:v${{ needs.release.outputs.version }}
           labels: |
             org.opencontainers.image.title=${{ steps.meta.outputs.name }}
             org.opencontainers.image.url=${{ github.event.repository.html_url }}
-            org.opencontainers.image.version=${{ needs.release.outputs.release-version }}
+            org.opencontainers.image.version=${{ needs.release.outputs.version }}
             org.opencontainers.image.source=${{ github.event.repository.clone_url }}
             org.opencontainers.image.revision=${{ github.sha }}
 
