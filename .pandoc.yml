@@ -1,7 +1,3 @@
-# ----------------------------------------------- #
-# Note: this file originates in template-template #
-# ----------------------------------------------- #
-
 input-file: docs/README.md
 output-file: README.md
 metadata-file: colophon.yml
