@@ -82,11 +82,5 @@ use \[Docker Compose\]\[docker-compose\] to run tasks locally:
 [release-url]: https://github.com/ahmadnassri/template-node-lib/releases
 [release-img]: https://badgen.net/github/release/ahmadnassri/template-node-lib
 
-[super-linter-url]: https://github.com/ahmadnassri/template-node-lib/actions?query=workflow%3Asuper-linter
-[super-linter-img]: https://github.com/ahmadnassri/template-node-lib/workflows/super-linter/badge.svg
-
-[test-url]: https://github.com/ahmadnassri/template-node-lib/actions?query=workflow%3Atest
-[test-img]: https://github.com/ahmadnassri/template-node-lib/workflows/test/badge.svg
-
 [semantic-url]: https://github.com/ahmadnassri/template-node-lib/actions?query=workflow%3Arelease
 [semantic-img]: https://badgen.net/badge/📦/semantically%20released/blue
