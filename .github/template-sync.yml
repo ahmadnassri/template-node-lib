@@ -3,7 +3,6 @@ additional:
   - "node-*"
   - "!node-create"
   - "!node-debug"
-  - "!node-error"
   - "!node-fs-writefile-promise"
   - "!node-har"
   - "!node-har-validator"

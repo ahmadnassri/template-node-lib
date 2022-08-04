@@ -22,7 +22,7 @@
     "library"
   ],
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "files": [
     "lib"
