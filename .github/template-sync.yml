@@ -9,7 +9,6 @@ additional:
   - "!node-install-group"
   - "!node-marked-promise"
   - "!node-spawn-promise"
-  - "!node-updated"
 
 files:
   - "!**.js"
