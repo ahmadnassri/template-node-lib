@@ -26,7 +26,7 @@
 
 #### GitHub Templates
 
-> Automated through [`@ahmadnassri/action-template-repository-sync`](https://github.com/ahmadnassri/action-template-repository-sync)
+> Automated through [`@ahmadnassri/action-template-repository-sync`][]
 
 1. create a repository from the template
 1. clone locally
@@ -38,17 +38,18 @@
 
 ## Local Automation
 
-use [Docker Compose][docker-compose] to run tasks locally:
+use [Docker Compose][docker compose] to run tasks locally:
 
-- `docker-compose run readme` to regenerate `README.md`
-- `docker-compose run test` to run tests across all LTS versions of Node.js
-- `docker-compose run lint` to execute [super-linter] locally
+- `docker compose run readme` to regenerate `README.md`
+- `docker compose run test` to run tests across all LTS versions of Node.js
+- `docker compose run lint` to execute [super-linter] locally
 
 > **Note:**  
-> Your main `README.md` file is in `docs/README.md`, the file at root is generated using [pandoc] using the provided [template](./docs/README.template).  
+> Your main `README.md` file is in `docs/README.md`, the file at root is generated using [pandoc] using the provided [template][].  
 >
-> You should run `docker-compose run readme` after any change to `docs/README.md` and before commit / push
+> You should run `docker compose run readme` after any change to `docs/README.md` and before commit / push
 
+[template]: ./docs/README.template
 [GitHub Releases]: https://github.com/ahmadnassri/template-node/releases
 [conventional-commits]: https://www.conventionalcommits.org/
 [dependabot-auto-merge]: https://github.com/marketplace/actions/dependabot-auto-merge
@@ -59,3 +60,4 @@ use [Docker Compose][docker-compose] to run tasks locally:
 [semantic-release]: https://github.com/marketplace/actions/conventional-semantic-release
 [super-linter]: https://github.com/github/super-linter
 [Conventional Commits]: https://www.conventionalcommits.org/en/v1.0.0/
+[`@ahmadnassri/action-template-repository-sync`]: https://github.com/ahmadnassri/action-template-repository-sync

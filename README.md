@@ -46,16 +46,16 @@ node library project template
 
 ## Local Automation
 
-use \[Docker Compose\]\[docker-compose\] to run tasks locally:
+use [Docker Compose][] to run tasks locally:
 
--   `docker-compose run readme` to regenerate `README.md`
--   `docker-compose run test` to run tests across all LTS versions of Node.js
--   `docker-compose run lint` to execute [super-linter][] locally
+-   `docker compose run readme` to regenerate `README.md`
+-   `docker compose run test` to run tests across all LTS versions of Node.js
+-   `docker compose run lint` to execute [super-linter][] locally
 
 > **Note:**  
 > Your main `README.md` file is in `docs/README.md`, the file at root is generated using [pandoc][] using the provided [template][].
 >
-> You should run `docker-compose run readme` after any change to `docs/README.md` and before commit / push
+> You should run `docker compose run readme` after any change to `docs/README.md` and before commit / push
 
   [GitHub Actions]: https://github.com/features/actions
   [conventional-commits]: https://www.conventionalcommits.org/
