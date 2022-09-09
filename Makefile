@@ -1,8 +1,8 @@
 #!/usr/bin/make
 
-# ------------------------------------------------------------- #
-# Note: this file is automatically managed in template-node-lib #
-# ------------------------------------------------------------- #
+# ----------------------------------------------- #
+# Note: this file originates in template-node-lib #
+# ----------------------------------------------- #
 
 NPMRC := $(shell npm config get userconfig)
 
