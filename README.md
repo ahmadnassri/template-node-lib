@@ -12,21 +12,22 @@ node library project template
 
 > Using [GitHub Actions][]
 
--   automatic releases with [conventional-commits][] & [semantic-release][]
+-   release with [conventional-commits][] & [semantic-release][]
 -   publish to both npm Public Registry & GitHub Package Manager
 -   full history changelog in [GitHub Releases][]
 -   automatic pull-requests for dependency updates using [dependabot][]
 -   automatic merging of "patch" updates to dependencies using [dependabot-auto-merge][]
--   lint everything with [super-linter][]
+-   lint everything with [mega-linter][]
 -   lint commit message format against [Conventional Commits][]
 -   test on all LTS versions of Node.js
 -   run `npm audit` before releasing / testing to keep a higher security standard
+-   repositories are kept up to date using [`@ahmadnassri/action-template-repository-sync`][]
 
 ##### Local Automation
 
 > Using [Docker Compose][]
 
--   lint everything with [super-linter][]
+-   lint everything with [mega-linter][]
 -   test on all LTS versions of Node.js
 -   generate README using [pandoc][] with a [template][]
 
@@ -50,7 +51,7 @@ use [Docker Compose][] to run tasks locally:
 
 -   `docker compose run readme` to regenerate `README.md`
 -   `docker compose run test` to run tests across all LTS versions of Node.js
--   `docker compose run lint` to execute [super-linter][] locally
+-   `docker compose run lint` to execute [mega-linter][] locally
 
 > **Note:**  
 > Your main `README.md` file is in `docs/README.md`, the file at root is generated using [pandoc][] using the provided [template][].
@@ -60,15 +61,15 @@ use [Docker Compose][] to run tasks locally:
   [GitHub Actions]: https://github.com/features/actions
   [conventional-commits]: https://www.conventionalcommits.org/
   [semantic-release]: https://github.com/marketplace/actions/conventional-semantic-release
-  [GitHub Releases]: https://github.com/ahmadnassri/template-node/releases
+  [GitHub Releases]: /template-node-lib/releases
   [dependabot]: https://dependabot.com/
   [dependabot-auto-merge]: https://github.com/marketplace/actions/dependabot-auto-merge
-  [super-linter]: https://github.com/github/super-linter
+  [mega-linter]: https://oxsecurity.github.io/megalinter/
   [Conventional Commits]: https://www.conventionalcommits.org/en/v1.0.0/
+  [`@ahmadnassri/action-template-repository-sync`]: https://github.com/ahmadnassri/action-template-repository-sync
   [Docker Compose]: https://docs.docker.com/compose/
   [pandoc]: https://pandoc.org/
   [template]: ./docs/README.template
-  [`@ahmadnassri/action-template-repository-sync`]: https://github.com/ahmadnassri/action-template-repository-sync
 
 ----
 > Author: [Ahmad Nassri](https://www.ahmadnassri.com/) &bull;
