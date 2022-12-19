@@ -7,7 +7,6 @@ additional:
   - "!node-har-validator"
   - "!node-install-group"
   - "!node-marked-promise"
-  - "!node-spawn-promise"
 
 files:
   - "!**.js"
