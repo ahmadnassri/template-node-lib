@@ -2,7 +2,7 @@
   "version": "0.0.0-semantically-released",
   "name": "@ahmadnassri/template-lib",
   "description": "node library project template",
-  "author": "Ahmad Nassri <email@ahmadnassri.com> (https://www.ahmadnassri.com)",
+  "author": "Ahmad Nassri <opensource@ahmadnassri.net> (https://www.ahmadnassri.com)",
   "homepage": "https://github.com/ahmadnassri/template-node-lib",
   "repository": {
     "type": "git",
