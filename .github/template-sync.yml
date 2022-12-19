@@ -1,7 +1,6 @@
 additional:
   # temporarily include repos manually # https://github.com/github/docs/issues/3630
   - "node-*"
-  - "!node-create"
   - "!node-debug"
   - "!node-fs-writefile-promise"
   - "!node-har"
