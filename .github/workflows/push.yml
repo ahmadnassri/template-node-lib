@@ -133,7 +133,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: npm
 
-      - uses: ahmadnassri/action-github-registry-npm-proxy@v3.0.1
+      - uses: ahmadnassri/action-github-registry-npm-proxy@v4.0.2
         with:
           token: ${{ github.token }}
 
