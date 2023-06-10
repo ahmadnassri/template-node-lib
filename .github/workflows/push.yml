@@ -300,7 +300,7 @@ jobs:
 
     needs:
       - metadata
-      - test-run
+      - test
       - commit-lint
       - mega-linter
 
