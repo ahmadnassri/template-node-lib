@@ -1,5 +1,5 @@
 # ----------------------------------------------- #
-# Note: this file originates in template-template #
+# Note: this file originates in template-node-lib #
 # ----------------------------------------------- #
 
 name: push
@@ -12,9 +12,10 @@ permissions: read-all
 
 jobs:
   main:
-    uses: ahmadnassri/actions/.github/workflows/push-template.yml@master
+    uses: ahmadnassri/actions/.github/workflows/push-javascript.yml@master
     secrets: inherit
     permissions:
       contents: write
       statuses: write
+      packages: write
       pull-requests: write
