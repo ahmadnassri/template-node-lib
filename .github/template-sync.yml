@@ -4,7 +4,6 @@ additional:
   - "!node-fs-writefile-promise"
   - "!node-har"
   - "!node-har-validator"
-  - "!node-install-group"
 
 files:
   - "!**.js"
