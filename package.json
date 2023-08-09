@@ -35,5 +35,7 @@
     "test:watch": "npm run test:cli -- --watch test",
     "test:ci": "npm run test:cli -- --test-reporter node-test-github-reporter test"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "node-test-github-reporter": "^1.1.3"
+  }
 }
