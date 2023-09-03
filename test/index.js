@@ -1,6 +1,6 @@
-const { test } = require('tap')
+const { test } = require('node:test')
+const assert = require('node:assert')
 
-test('example', assert => {
-  assert.plan(1)
+test('example', () => {
   assert.ok(true)
 })

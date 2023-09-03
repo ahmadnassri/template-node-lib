@@ -11,7 +11,7 @@ files:
   - "!docs/README.md"
   - "!colophon.yml"
   - "!package*.json"
-  - "!.github/test-matrix.json"
+  - "!.github/matrix-*.json"
   - "!**/template-sync.yml"
   - "!.github/dependabot.yml"
   - "!.github/workflows/*.yml"
