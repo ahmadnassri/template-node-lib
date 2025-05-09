@@ -22,7 +22,7 @@
     "library"
   ],
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "files": [
     "src"
@@ -30,12 +30,14 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "npm run test:cli -- test",
-    "test:cli": "node --experimental-test-coverage --test",
-    "test:watch": "npm run test:cli -- --watch test",
-    "test:ci": "npm run test:cli -- --test-reporter node-test-github-reporter test"
+    "test": "npm run test:100 --test-reporter=spec --test-reporter-destination=stdout",
+    "test:cli": "node --test --experimental-test-coverage",
+    "test:100": "npm run test:cli -- --test-coverage-branches=100 --test-coverage-functions=100 --test-coverage-lines=100",
+    "test:watch": "npm run test:cli -- --watch",
+    "test:lcov": "npm run test:cli -- --test-reporter=lcov --test-reporter-destination=lcov.info --test-coverage-exclude=test/** --no-warnings",
+    "test:ci": "npm run test:100 -- --test-reporter=@reporters/github --test-reporter-destination stdout"
   },
   "devDependencies": {
-    "node-test-github-reporter": "^1.2.0"
+    "@reporters/github": "^1.7.0"
   }
 }
